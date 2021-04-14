@@ -18,3 +18,9 @@ You need:
     No publish default views.
     Copy all files to 'resources\views\livewire\datatables'.
 
+## Screenshots
+- Basic usage
+![example_basic](https://i.ibb.co/NKgJJBN/Basic-Usage.png)
+
+- Component Syntax
+![example_basic](https://i.ibb.co/MSxcj8k/Component-Syntax.png)

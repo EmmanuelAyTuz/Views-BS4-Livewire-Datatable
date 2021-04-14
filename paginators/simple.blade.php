@@ -1,4 +1,4 @@
-<div class="btn-group" role="group" aria-label="simple-pagination">
+<div class="btn-group ml-2" role="group" aria-label="simple-pagination">
     <!-- Previous Page Link -->
     <a class="btn btn-light pt-2" @unless ($paginator->onFirstPage()) wire:click="previousPage" @endunless>
         <span class="text-md @if ($paginator->onFirstPage()) {{ 'text-gray' }} @else {{ '' }} @endif">

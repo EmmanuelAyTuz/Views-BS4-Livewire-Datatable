@@ -14,7 +14,7 @@
                     </span>
                 </div>
 
-                <input wire:model.debounce.500ms="search" class="form-control rounded-pill" placeholder="Search in {{ $this->searchableColumns()->map->label->join(', ') }}"/>
+                <input wire:model.debounce.500ms="search" class="form-control rounded-pill mr-1" placeholder="Search in {{ $this->searchableColumns()->map->label->join(', ') }}"/>
             @endif
 
             <div class="input-group-append" id="export-excel">
@@ -68,22 +68,12 @@
                             </span>
                         @endif
                     @endforeach
-                    @break
-                @case('inline')
-                    @foreach($this->columns as $index => $column)
-                        @if($column['hidden'])
-                            <span class="badge badge-primary m-2" wire:click.prefech="toggle('{{ $index }}')">
-                                {{ str_replace('_', ' ', $column['label']) }}
-                                @include('datatables::icons.eye')
-                            </span>
-                        @endif
-                    @endforeach
-                    @break                    
+                    @break                 
             @endswitch
         </div>
     </div>
 
-    <div class="card rounded-lg shadow bg-white">
+    <div class="card rounded-lg shadow bg-white table-responsive">
         <table class="table table-sm table-striped table-hover">
             @unless($this->hideHeader)
                 <thead class="thead-light">
@@ -112,16 +102,25 @@
                                     @endif
                                 </th>
                             @else
-                                @unless ($column['hidden'] && ($hideable !== 'buttons' || $hideable !== 'select'))
-                                    @if (($column['type'] !== 'checkbox'))
-                                        <th data-info="hidden buttons select"></th>
-                                    @endif
-                                @endunless
-
-                                @if ($hideable === 'inline')
-                                    @if (($column['type'] !== 'checkbox'))
-                                        <th data-info="inline"></th>
-                                    @endif
+                                @if($column['type'] !== 'checkbox')
+                                    @switch($hideable)
+                                        @case('inline')
+                                            <th></th>
+                                            @break
+                                        @case('select')
+                                            @unless ($column['hidden'])
+                                            <th></th>
+                                            @endunless
+                                            @break
+                                        @case('buttons')
+                                            @unless ($column['hidden'])
+                                            <th></th>
+                                            @endunless
+                                            @break
+                                        @default
+                                            <th></th> 
+                                            @break
+                                    @endswitch
                                 @endif
                             @endif
                         @endforeach
@@ -143,7 +142,10 @@
                                         @break
                                     @case('buttons')
                                         @include('datatables::headers.buttons', ['column' => $column, 'sort' => $sort])
-                                        @break    
+                                        @break
+                                    @default
+                                        @include('datatables::headers.default', ['column' => $column, 'sort' => $sort])
+                                        @break
                                 @endswitch
                             @endif
                         @endforeach
@@ -155,9 +157,14 @@
                         <tr class="{{ isset($result->checkbox_attribute) && in_array($result->checkbox_attribute, $selected) ? 'table-warning' : '' }}">
                             @foreach($this->columns as $column)
                                 @if($column['hidden'])
-                                    @if ($hideable === 'inline')
-                                        <th></th>
-                                    @endif
+                                    @switch($hideable)
+                                        @case('inline')
+                                            <th></th>
+                                            @break
+                                        @default
+                                            <th></th>
+                                            @break
+                                    @endswitch
                                 @elseif($column['type'] === 'checkbox')
                                     <th>@include('datatables::checkbox', ['value' => $result->checkbox_attribute])</th>
                                 @else
