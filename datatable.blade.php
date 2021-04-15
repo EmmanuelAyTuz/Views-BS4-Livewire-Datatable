@@ -161,7 +161,7 @@
                                         @case('inline')
                                             <th></th>
                                             @break
-                                        @default
+                                        @case('')
                                             <th></th>
                                             @break
                                     @endswitch
