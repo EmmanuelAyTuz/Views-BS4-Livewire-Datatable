@@ -17,21 +17,21 @@
                 <input wire:model.debounce.500ms="search" class="form-control rounded-pill mr-1" placeholder="Search in {{ $this->searchableColumns()->map->label->join(', ') }}"/>
             @endif
 
-            <div class="input-group-append" id="export-excel">
-                @if($exportable)
+            @if($exportable)
+                <div class="input-group-append" id="export-excel">
                     <div class="ml-2" x-data="{ init() { window.livewire.on('startDownload', link => window.open(link,'_blank')) } }" x-init="init">
                         <button wire:click="export" class="btn btn-outline-success">
                             @include('datatables::icons.excel', ['text' => 'Export'])
                         </button>
                     </div>
-                @endif
-            </div>
+                </div>
+            @endif
 
-            <div class="input-group-append" id="hideable-select">
-                @if($hideable === 'select')
+            @if($hideable === 'select')
+                <div class="input-group-append" id="hideable-select">
                     @include('datatables::hide-column-multiselect')
-                @endif
-            </div>
+                </div>
+            @endif
 
             <div class="input-group-append" id="simple-pagination">
                 {{ $this->results->links('datatables::paginators.simple') }}
