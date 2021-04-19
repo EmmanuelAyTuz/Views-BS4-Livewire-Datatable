@@ -17,7 +17,7 @@ You need:
     composer require emmanuel/livewire-datatable-bs4
 
 ## Installation
-    No publish default views.
+    No publish default views of Livewire Datatables.
     
     php artisan vendor:publish --tag="livewire-datatable-bs4"
 
