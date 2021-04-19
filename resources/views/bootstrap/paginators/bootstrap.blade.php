@@ -3,7 +3,7 @@
         
         <!-- Previous Page Link -->
         <li class="page-item @if ($paginator->onFirstPage()) {{ 'disabled' }} @else {{ '' }} @endif" aria-disabled='true'>
-            <a @if (!$paginator->onFirstPage()) wire:click="previousPage" @endif class="page-link">Prev</a>
+            <a @if (!$paginator->onFirstPage()) wire:click="previousPage" @endif class="page-link">{{ __('LivewireDatatableBs4::datatable.prev') }}</a>
         </li>
 
         <!-- Elements/Pages/Links -->
@@ -26,7 +26,7 @@
         
         <!-- Next Page Link -->
         <li class="page-item @if ($paginator->hasMorePages()) {{ '' }} @else {{ 'disabled' }} @endif">
-            <a @if ($paginator->hasMorePages()) wire:click="nextPage" @endif class="page-link">Next</a>
+            <a @if ($paginator->hasMorePages()) wire:click="nextPage" @endif class="page-link">{{ __('LivewireDatatableBs4::datatable.next') }}</a>
         </li>
 
     </ul>

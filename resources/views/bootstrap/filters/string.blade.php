@@ -2,7 +2,7 @@
     <input x-ref="inputSearch" type="text" class="rounded-pill form-control"
         wire:change="doTextFilter('{{ $index }}', $event.target.value)"
         x-on:change="$refs.inputSearch.value = ''"
-        placeholder="Type here for find" />
+        placeholder="{{ __('LivewireDatatableBs4::datatable.type_find') }}" />
 </div>
 
 @foreach($this->activeTextFilters[$index] ?? [] as $key => $value)
