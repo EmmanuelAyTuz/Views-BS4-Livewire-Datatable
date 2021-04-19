@@ -1,4 +1,4 @@
-<th scope="col">
+@if($isTemplateSyntax ?? false)<th scope="col">@endif
     <div class="btn-group" role="group" aria-label="header-buttons">
         @include('datatables::common.sorter')
         @if($hideable === 'inline')
@@ -11,4 +11,4 @@
             </button>
         @endif
     </div>
-</th>
+@if($isTemplateSyntax ?? false)</th>@endif

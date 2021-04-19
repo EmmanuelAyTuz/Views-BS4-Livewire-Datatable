@@ -1,5 +1,5 @@
 @unless ($column['hidden'])
-    <th scope="col">
+    @if($isTemplateSyntax ?? false)<th scope="col">@endif
         @include('datatables::common.sorter')
-    </th>
+    @if($isTemplateSyntax ?? false)</th>@endif
 @endif
