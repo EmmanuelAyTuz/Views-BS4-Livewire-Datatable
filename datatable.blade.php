@@ -86,6 +86,7 @@
                                         <input id="select-all" type="checkbox" class="custom-control-input" wire:click="toggleSelectAll" @if(count($selected) === $this->results->total()) checked @endif />
                                         <label for="select-all" class="custom-control-label"></label>
                                     </div>
+                                    {{ count($selected) }}
                                 </th>
                             @endif
 
@@ -100,53 +101,40 @@
                                             @include('datatables::filters.' . ($column['filterView'] ?? $column['type']), ['index' => $index, 'name' => $column['label']])
                                         </div>
                                     @endif
+                                    @if($column['type'] !== 'checkbox')
+                                        @switch($hideable)
+                                            @case('inline')
+                                                @include('datatables::headers.inline', ['column' => $column, 'sort' => $sort])
+                                                @break
+                                            @case('select')
+                                                @include('datatables::headers.select', ['column' => $column, 'sort' => $sort])
+                                                @break
+                                            @case('buttons')
+                                                @include('datatables::headers.buttons', ['column' => $column, 'sort' => $sort])
+                                                @break
+                                            @default
+                                                @include('datatables::headers.default', ['column' => $column, 'sort' => $sort])
+                                                @break
+                                        @endswitch
+                                    @endif
                                 </th>
                             @else
                                 @if($column['type'] !== 'checkbox')
                                     @switch($hideable)
                                         @case('inline')
-                                            <th></th>
+                                            @include('datatables::headers.inline', ['column' => $column, 'sort' => $sort, 'isTemplateSyntax' => true])
                                             @break
                                         @case('select')
-                                            @unless ($column['hidden'])
-                                            <th></th>
-                                            @endunless
+                                            @include('datatables::headers.select', ['column' => $column, 'sort' => $sort, 'isTemplateSyntax' => true])
                                             @break
                                         @case('buttons')
-                                            @unless ($column['hidden'])
-                                            <th></th>
-                                            @endunless
+                                            @include('datatables::headers.buttons', ['column' => $column, 'sort' => $sort, 'isTemplateSyntax' => true])
                                             @break
                                         @default
-                                            <th></th> 
+                                            @include('datatables::headers.default', ['column' => $column, 'sort' => $sort, 'isTemplateSyntax' => true])
                                             @break
                                     @endswitch
                                 @endif
-                            @endif
-                        @endforeach
-                    </tr>
-
-                    <tr>
-                        @foreach($this->columns as $index => $column)
-                            @if($column['type'] === 'checkbox')
-                                <th class="text-left text-xs">
-                                    {{ count($selected) }}
-                                </th>
-                            @else
-                                @switch($hideable)
-                                    @case('inline')
-                                        @include('datatables::headers.inline', ['column' => $column, 'sort' => $sort])
-                                        @break
-                                    @case('select')
-                                        @include('datatables::headers.select', ['column' => $column, 'sort' => $sort])
-                                        @break
-                                    @case('buttons')
-                                        @include('datatables::headers.buttons', ['column' => $column, 'sort' => $sort])
-                                        @break
-                                    @default
-                                        @include('datatables::headers.default', ['column' => $column, 'sort' => $sort])
-                                        @break
-                                @endswitch
                             @endif
                         @endforeach
                     </tr>
