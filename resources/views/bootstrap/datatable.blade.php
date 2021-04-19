@@ -14,14 +14,14 @@
                     </span>
                 </div>
 
-                <input wire:model.debounce.500ms="search" class="form-control rounded-pill mr-1" placeholder="Search in {{ $this->searchableColumns()->map->label->join(', ') }}"/>
+                <input wire:model.debounce.500ms="search" class="form-control rounded-pill mr-1" placeholder="{{ __('LivewireDatatableBs4::datatable.search', ['columns' => $this->searchableColumns()->map->label->join(', ')]) }}"/>
             @endif
 
             @if($exportable)
                 <div class="input-group-append" id="export-excel">
                     <div class="ml-2" x-data="{ init() { window.livewire.on('startDownload', link => window.open(link,'_blank')) } }" x-init="init">
                         <button wire:click="export" class="btn btn-outline-success">
-                            @include('datatables::icons.excel', ['text' => 'Export'])
+                            @include('datatables::icons.excel', ['text' => __('LivewireDatatableBs4::datatable.export')])
                         </button>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
             <div class="d-flex justify-content-center">
                 <div wire:loading>
                     <span>
-                        @include('datatables::icons.loading', ['text' => 'Loading...'])
+                        @include('datatables::icons.loading', ['text' => __('LivewireDatatableBs4::datatable.loading')])
                     </span>
                 </div>
             </div>
@@ -81,7 +81,7 @@
                         @foreach($this->columns as $index => $column)
                             @if($column['type'] === 'checkbox')
                                 <th>
-                                    <span>Select All</span>
+                                    <span>{{ __('LivewireDatatableBs4::datatable.select_all') }}</span>
                                     <div class="custom-control custom-switch">
                                         <input id="select-all" type="checkbox" class="custom-control-input" wire:click="toggleSelectAll" @if(count($selected) === $this->results->total()) checked @endif />
                                         <label for="select-all" class="custom-control-label"></label>
@@ -165,7 +165,7 @@
                     @empty
                         <tr>
                             <th class="text-center" colspan="{{ count($this->columns) }}">
-                                <small>There's Nothing to show at the moment</small>
+                                <small>{{ __('LivewireDatatableBs4::datatable.no_data_table') }}</small>
                             </th>
                         </tr>
                     @endforelse
@@ -182,7 +182,7 @@
                 </div>
                 <div class="col-md-4 d-flex justify-content-end">
                     <small>
-                        Results {{ $this->results->firstItem() }} - {{ $this->results->lastItem() }} of {{ $this->results->total() }}
+                        {{ __('LivewireDatatableBs4::datatable.pagination_text', ['start' => $this->results->firstItem(), 'end' => $this->results->lastItem(), 'total' => $this->results->total()]) }}
                     </small>
                 </div>
             </div>
