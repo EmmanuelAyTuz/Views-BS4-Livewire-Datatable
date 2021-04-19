@@ -1,0 +1,31 @@
+{
+    "name": "emmanuel/livewire-datatable-bs4",
+    "description": "Views for the package Livewire Datatables with Bootstrap 4",
+    "type": "library",
+    "require": {
+        "mediconesystems/livewire-datatables": "^0.4.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^6.17"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "EmmanuelAyTuz"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Emmanuel\\LivewireDatatableBs4\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Emmanuel\\LivewireDatatableBs4\\LivewireDatatableServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
