@@ -13,10 +13,13 @@ You need:
 ## Optional
 - [Jetstrap](https://github.com/nascent-africa/jetstrap)
 
-## Installation
+## Download
+    composer require emmanuel/livewire-datatable-bs4
 
+## Installation
     No publish default views.
-    Copy all files to 'resources\views\livewire\datatables'.
+    
+    php artisan vendor:publish --tag="livewire-datatable-bs4"
 
 ## Screenshots
 - Basic usage
