@@ -1,5 +1,5 @@
 # Views-BS4-Livewire-Datatable
-Views for Bootstrap 4, package Livewire Datatables, only views and some language.
+Views for Bootstrap 4, package Livewire Datatables, only views and some languages.
 
 - Views with Bootstrap 4 classes
 - Based on views of package [Livewire Datatable](https://github.com/MedicOneSystems/livewire-datatables)
