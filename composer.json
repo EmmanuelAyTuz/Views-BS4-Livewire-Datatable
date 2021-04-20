@@ -6,7 +6,7 @@
         "livewire",
         "datatables",
         "tables",
-        "laravel"
+        "laravel",
         "bootstrap"
     ],
     "type": "library",
