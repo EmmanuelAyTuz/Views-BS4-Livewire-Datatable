@@ -6,7 +6,7 @@ return [
     'select_all' => 'Marcar Todo',
     'no_data_table' => 'No hay nada para mostrar',
     'pagination_text' => 'Resultados :start - :end de :total',
-    'prev' => 'Prev',
+    'prev' => 'Ant',
     'next' => 'Sig',
     'all' => 'Todo',
     'hide' => 'Ocultar',
