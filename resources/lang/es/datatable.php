@@ -20,5 +20,5 @@ return [
     'type_find' => 'Escribe aquí para buscar',
     'modal_delete_title' => 'Eliminar :id',
     'modal_delete_info' => '¿Estas seguro de esta acción?',
-    'deleting' => 'Eliminado...'
+    'deleting' => 'Eliminando...'
 ];
