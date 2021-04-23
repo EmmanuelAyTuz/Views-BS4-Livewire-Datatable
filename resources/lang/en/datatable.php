@@ -5,7 +5,7 @@ return [
     'search' => 'Search in :columns',
     'select_all' => 'Select All',
     'no_data_table' => 'There\'s Nothing to show at the moment',
-    'pagination_text' => 'Results :start - :end de :total',
+    'pagination_text' => 'Results :start - :end of :total',
     'prev' => 'Prev',
     'next' => 'Next',
     'all' => 'All',
