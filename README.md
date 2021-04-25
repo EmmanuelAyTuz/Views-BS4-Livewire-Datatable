@@ -23,7 +23,9 @@ You need:
 
 ## Screenshots
 - Template Syntax
-![example_basic](https://i.ibb.co/NKgJJBN/Basic-Usage.png)
+![example_template](https://user-images.githubusercontent.com/34067768/115980313-717ec700-a551-11eb-960c-c4408576162d.png)
+
 
 - Component Syntax
-![example_basic](https://i.ibb.co/MSxcj8k/Component-Syntax.png)
+![example_component](https://user-images.githubusercontent.com/34067768/115980415-316c1400-a552-11eb-9861-17ba9f2c4a7f.png)
+
