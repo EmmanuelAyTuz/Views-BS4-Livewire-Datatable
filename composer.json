@@ -1,6 +1,14 @@
 {
     "name": "emmanuel/livewire-datatable-bs4",
     "description": "Views for the package Livewire Datatables with Bootstrap 4",
+    "keywords": [
+        "mediconesystems",
+        "livewire",
+        "datatables",
+        "tables",
+        "laravel",
+        "bootstrap"
+    ],
     "type": "library",
     "require": {
         "mediconesystems/livewire-datatables": "^0.4.3"
