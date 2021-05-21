@@ -10,7 +10,7 @@ You need:
 - [Livewire](https://github.com/livewire/livewire)
 - [Livewire Datatables](https://github.com/MedicOneSystems/livewire-datatables)
 
-## Optional
+## Highly recommended
 - [Jetstrap](https://github.com/nascent-africa/jetstrap)
 
 ## Download
