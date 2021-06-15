@@ -11,7 +11,7 @@
     ],
     "type": "library",
     "require": {
-        "mediconesystems/livewire-datatables": "^0.4.3"
+        "mediconesystems/livewire-datatables": "^0.4.3|dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
