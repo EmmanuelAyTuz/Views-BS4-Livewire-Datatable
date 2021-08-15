@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a649260e868d7a32d5d6b2f0173cd49a",
+    "content-hash": "2a276752b4305bf7505a0ebe52e17d11",
     "packages": [
         {
             "name": "brick/math",
@@ -1297,23 +1297,23 @@
         },
         {
             "name": "mediconesystems/livewire-datatables",
-            "version": "v0.4.3",
+            "version": "v0.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MedicOneSystems/livewire-datatables.git",
-                "reference": "b0f3b3b9ee801d6870de898436090b27b2bc19c0"
+                "reference": "bf6f24d529208e6bdec58276e92792719c73c827"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MedicOneSystems/livewire-datatables/zipball/b0f3b3b9ee801d6870de898436090b27b2bc19c0",
-                "reference": "b0f3b3b9ee801d6870de898436090b27b2bc19c0",
+                "url": "https://api.github.com/repos/MedicOneSystems/livewire-datatables/zipball/bf6f24d529208e6bdec58276e92792719c73c827",
+                "reference": "bf6f24d529208e6bdec58276e92792719c73c827",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "^7.0|^8.0",
                 "livewire/livewire": "^1.2|^2.0",
                 "maatwebsite/excel": "^3.1",
-                "php": "^7.2.5"
+                "php": "^7.2.5|^8.0"
             },
             "require-dev": {
                 "laravel/legacy-factories": "^1.0.4",
@@ -1354,9 +1354,9 @@
             ],
             "support": {
                 "issues": "https://github.com/MedicOneSystems/livewire-datatables/issues",
-                "source": "https://github.com/MedicOneSystems/livewire-datatables/tree/v0.4.3"
+                "source": "https://github.com/MedicOneSystems/livewire-datatables/tree/v0.5.4"
             },
-            "time": "2020-11-16T12:02:40+00:00"
+            "time": "2021-08-09T20:37:55+00:00"
         },
         {
             "name": "monolog/monolog",
