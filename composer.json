@@ -11,7 +11,7 @@
     ],
     "type": "library",
     "require": {
-        "mediconesystems/livewire-datatables": "^0.5.4|^0.4.3|dev-master",
+        "mediconesystems/livewire-datatables": "^0.4.3|dev-master",
         "league/flysystem": "1.1.4"
     },
     "require-dev": {
