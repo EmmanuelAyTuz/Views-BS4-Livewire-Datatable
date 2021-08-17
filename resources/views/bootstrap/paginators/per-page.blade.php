@@ -3,10 +3,9 @@
     @if($this->results[1])
         <div class="form-group">
             <select name="perPage" class="form-control custom-select rounded" wire:model="perPage">
-                <option value="10">10</option>
-                <option value="25">25</option>
-                <option value="50">50</option>
-                <option value="100">100</option>
+                @foreach(config('livewire-datatables.per_page_options', [10, 25, 50, 100]) as $perPageOption)
+                    <option value="{{ $perPageOption }}">{{ $perPageOption }}</option>
+                @endforeach
                 <option value="99999999">{{ __('LivewireDatatableBs4::datatable.all') }}</option>
             </select>
         </div>
