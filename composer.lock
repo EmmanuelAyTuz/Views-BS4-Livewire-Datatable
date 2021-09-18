@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b85cae2e7ac0d69edf9058afd001476",
+    "content-hash": "0537144777c0419d3dad9b936f02cf83",
     "packages": [
         {
             "name": "brick/math",
@@ -1464,21 +1464,21 @@
         },
         {
             "name": "mediconesystems/livewire-datatables",
-            "version": "v0.5.4",
+            "version": "v0.6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/MedicOneSystems/livewire-datatables.git",
-                "reference": "bf6f24d529208e6bdec58276e92792719c73c827"
+                "reference": "ecd2d2920f2d94212e026d93541f07499c93ae3c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/MedicOneSystems/livewire-datatables/zipball/bf6f24d529208e6bdec58276e92792719c73c827",
-                "reference": "bf6f24d529208e6bdec58276e92792719c73c827",
+                "url": "https://api.github.com/repos/MedicOneSystems/livewire-datatables/zipball/ecd2d2920f2d94212e026d93541f07499c93ae3c",
+                "reference": "ecd2d2920f2d94212e026d93541f07499c93ae3c",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "^7.0|^8.0",
-                "livewire/livewire": "^1.2|^2.0",
+                "livewire/livewire": "^2.4.4",
                 "maatwebsite/excel": "^3.1",
                 "php": "^7.2.5|^8.0"
             },
@@ -1521,9 +1521,9 @@
             ],
             "support": {
                 "issues": "https://github.com/MedicOneSystems/livewire-datatables/issues",
-                "source": "https://github.com/MedicOneSystems/livewire-datatables/tree/v0.5.4"
+                "source": "https://github.com/MedicOneSystems/livewire-datatables/tree/v0.6.6"
             },
-            "time": "2021-08-09T20:37:55+00:00"
+            "time": "2021-09-09T13:24:03+00:00"
         },
         {
             "name": "monolog/monolog",
