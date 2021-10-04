@@ -28,7 +28,3 @@ You need:
 
 - Component Syntax
 ![example_component](https://user-images.githubusercontent.com/34067768/115980415-316c1400-a552-11eb-9861-17ba9f2c4a7f.png)
-
-
-- Component Syntax
-![example_component](https://user-images.githubusercontent.com/34067768/115980415-316c1400-a552-11eb-9861-17ba9f2c4a7f.png)
