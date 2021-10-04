@@ -3,7 +3,7 @@
         
         <!-- Previous Page Link -->
         <li class="page-item @if ($paginator->onFirstPage()) {{ 'disabled' }} @else {{ '' }} @endif" aria-disabled='true'>
-            <a @if (!$paginator->onFirstPage()) wire:click="previousPage" @endif class="page-link">{{ __('LivewireDatatableBs4::datatable.prev') }}</a>
+            <a id="pagination-desktop-page-previous" @if (!$paginator->onFirstPage()) wire:click="previousPage" @endif class="page-link">{{ __('LivewireDatatableBs4::datatable.prev') }}</a>
         </li>
 
         <!-- Elements/Pages/Links -->
@@ -18,7 +18,7 @@
             @if (is_array($element))
                 @foreach ($element as $page => $url)
                     <li class="page-item {{ $page === $paginator->currentPage() ? 'active' : '' }}">
-                        <button class="page-link" wire:click="gotoPage({{ $page }})">{{ $page }}</button>
+                        <button id="pagination-desktop-page-{{ $page }}" class="page-link" wire:click="gotoPage({{ $page }})">{{ $page }}</button>
                     </li>
                 @endforeach
             @endif
@@ -26,7 +26,7 @@
         
         <!-- Next Page Link -->
         <li class="page-item @if ($paginator->hasMorePages()) {{ '' }} @else {{ 'disabled' }} @endif">
-            <a @if ($paginator->hasMorePages()) wire:click="nextPage" @endif class="page-link">{{ __('LivewireDatatableBs4::datatable.next') }}</a>
+            <a id="pagination-desktop-page-next" @if ($paginator->hasMorePages()) wire:click="nextPage" @endif class="page-link">{{ __('LivewireDatatableBs4::datatable.next') }}</a>
         </li>
 
     </ul>
