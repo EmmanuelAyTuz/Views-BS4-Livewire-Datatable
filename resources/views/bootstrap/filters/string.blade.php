@@ -7,6 +7,6 @@
 
 @foreach($this->activeTextFilters[$index] ?? [] as $key => $value)
     <span wire:click="removeTextFilter('{{ $index }}', '{{ $key }}')" class="badge badge-sm badge-info">
-        <span>{{ $this->getDisplayValue($index, $value) }}</span> @include('datatables::icons.x-circle')</i>
+        <span>{{ $this->getDisplayValue($index, $value) }}</span> @include('datatables::icons.x-circle')
     </span>
 @endforeach
