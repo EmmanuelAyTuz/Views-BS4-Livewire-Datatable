@@ -11,7 +11,7 @@ return [
     'all' => 'Todo',
     'hide' => 'Ocultar',
     'show' => 'Mostrar',
-    'table_col' => 'Columnas de la Tabla',
+    'table_col' => 'Columnas de la tabla',
     'no' => 'No',
     'yes' => 'Si',
     'min' => 'Min',
